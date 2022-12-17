@@ -40,3 +40,21 @@ layout:
         weight: 0
         additional: {  }
     third_party_settings: {  }
+  -
+    layout_id: layout_onecol
+    layout_settings:
+      label: ''
+      context_mapping: {  }
+    components:
+      2a5a3942-b82d-4c87-852e-82fcb1b6c072:
+        uuid: 2a5a3942-b82d-4c87-852e-82fcb1b6c072
+        region: content
+        configuration:
+          id: system_cron_status_block
+          label: 'Cron status'
+          label_display: visible
+          provider: system
+          context_mapping: {  }
+        weight: 0
+        additional: {  }
+    third_party_settings: {  }
