@@ -1,0 +1,42 @@
+uuid: 710be2f0-92d8-41ad-841e-9ab9443fdc6e
+langcode: en
+status: true
+dependencies: {  }
+id: administrator
+label: Administrator
+description: ''
+layout:
+  -
+    layout_id: layout_twocol_section
+    layout_settings:
+      label: ''
+      context_mapping: {  }
+      column_widths: 50-50
+    components:
+      119f79cc-f32d-41c3-a004-bb720f83b981:
+        uuid: 119f79cc-f32d-41c3-a004-bb720f83b981
+        region: first
+        configuration:
+          id: 'views_block:comments_recent-block_1'
+          label: ''
+          label_display: visible
+          provider: views
+          context_mapping: {  }
+          views_label: ''
+          items_per_page: none
+        weight: 0
+        additional: {  }
+      d6a1d642-b439-4de0-b264-61beee0b144a:
+        uuid: d6a1d642-b439-4de0-b264-61beee0b144a
+        region: second
+        configuration:
+          id: 'views_block:content_recent-block_1'
+          label: ''
+          label_display: visible
+          provider: views
+          context_mapping: {  }
+          views_label: ''
+          items_per_page: none
+        weight: 0
+        additional: {  }
+    third_party_settings: {  }
