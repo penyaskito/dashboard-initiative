@@ -39,6 +39,9 @@ ddev drush cset system.site uuid 05104925-b5ef-447d-a96a-bb6b3eed6182 --yes
 ddev drush entity-delete shortcut_set --yes
 
 ddev drush cim --yes
+
+# For restoring shortcuts.
+ddev drush php-eval 'include_once "core/profiles/standard/standard.install"; standard_install();'
 ```
 
 For updating your env to the latest:
