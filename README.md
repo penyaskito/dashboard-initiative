@@ -65,3 +65,13 @@ Git checkout 1.0.x
 ```
 git co 1.0.x
 ```
+
+Running tests
+====
+
+Running all tests:
+
+```
+ddev exec phpunit --testsuite all
+``
+
