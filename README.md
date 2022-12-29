@@ -73,5 +73,5 @@ Running all tests:
 
 ```
 ddev exec phpunit --testsuite all
-``
+```
 
