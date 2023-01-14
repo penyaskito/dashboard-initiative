@@ -1,0 +1,85 @@
+on: [push, pull_request]
+name: Tests and code
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/lullabot/drupal9ci:latest
+
+    services:
+      mariadb:
+        image: mariadb:latest
+        env:
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Update composer
+        run: composer self-update --2
+
+      - name: Build project
+        run: robo job:build
+
+      - name: Run PHPUnit tests
+        run: vendor/bin/robo job:unit-tests
+
+  code-standards:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/lullabot/drupal9ci:latest
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Update composer
+        run: composer self-update --2
+
+      - name: Build project
+        run: robo job:build
+
+      - name: Check coding standards
+        run: vendor/bin/robo job:coding-standards
+
+  code-coverage:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/lullabot/drupal9ci:latest
+
+    services:
+      mariadb:
+        image: mariadb:latest
+        env:
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Update composer
+        run: composer self-update --2
+
+      - name: Build project
+        run: robo job:build
+
+      - name: Assess code coverage
+        run: |
+          vendor/bin/robo job:coverage-report
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage
+
