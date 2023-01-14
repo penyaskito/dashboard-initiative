@@ -5,20 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: drupal:php8.1-apache-bullseye
-      .before_script_template:
-        before_script:
-          - apt-get update -yqq
-          - apt-get install -yqq git libpq-dev libcurl4-gnutls-dev libicu-dev libvpx-dev libjpeg-dev libpng-dev libxpm-dev zlib1g-dev libfreetype6-dev libxml2-dev libexpat1-dev libbz2-dev libgmp3-dev libldap2-dev unixodbc-dev libsqlite3-dev libaspell-dev libsnmp-dev libpcre3-dev libtidy-dev libonig-dev libzip-dev wget
-          # Install PHP extensions
-          - docker-php-ext-install mbstring curl intl gd xml bz2
-          # Install & enable Xdebug for code coverage reports
-          - pecl install xdebug
-          - docker-php-ext-enable xdebug
-          # Remove the memory limit for the CLI only.
-          - echo 'memory_limit = -1' > /usr/local/etc/php/php-cli.ini
-          # Install Robo CI.
-          - wget https://robo.li/robo.phar
-          - chmod +x robo.phar && mv robo.phar /usr/local/bin/robo
     services:
       mariadb:
         image: mariadb:latest
@@ -46,20 +32,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: drupal:php8.1-apache-bullseye
-      .before_script_template:
-        before_script:
-          - apt-get update -yqq
-          - apt-get install -yqq git libpq-dev libcurl4-gnutls-dev libicu-dev libvpx-dev libjpeg-dev libpng-dev libxpm-dev zlib1g-dev libfreetype6-dev libxml2-dev libexpat1-dev libbz2-dev libgmp3-dev libldap2-dev unixodbc-dev libsqlite3-dev libaspell-dev libsnmp-dev libpcre3-dev libtidy-dev libonig-dev libzip-dev wget
-          # Install PHP extensions
-          - docker-php-ext-install mbstring curl intl gd xml bz2
-          # Install & enable Xdebug for code coverage reports
-          - pecl install xdebug
-          - docker-php-ext-enable xdebug
-          # Remove the memory limit for the CLI only.
-          - echo 'memory_limit = -1' > /usr/local/etc/php/php-cli.ini
-          # Install Robo CI.
-          - wget https://robo.li/robo.phar
-          - chmod +x robo.phar && mv robo.phar /usr/local/bin/robo
 
     steps:
       - uses: actions/checkout@v1
@@ -79,20 +51,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: drupal:php8.1-apache-bullseye
-      .before_script_template:
-        before_script:
-          - apt-get update -yqq
-          - apt-get install -yqq git libpq-dev libcurl4-gnutls-dev libicu-dev libvpx-dev libjpeg-dev libpng-dev libxpm-dev zlib1g-dev libfreetype6-dev libxml2-dev libexpat1-dev libbz2-dev libgmp3-dev libldap2-dev unixodbc-dev libsqlite3-dev libaspell-dev libsnmp-dev libpcre3-dev libtidy-dev libonig-dev libzip-dev wget
-          # Install PHP extensions
-          - docker-php-ext-install mbstring curl intl gd xml bz2
-          # Install & enable Xdebug for code coverage reports
-          - pecl install xdebug
-          - docker-php-ext-enable xdebug
-          # Remove the memory limit for the CLI only.
-          - echo 'memory_limit = -1' > /usr/local/etc/php/php-cli.ini
-          # Install Robo CI.
-          - wget https://robo.li/robo.phar
-          - chmod +x robo.phar && mv robo.phar /usr/local/bin/robo
 
     services:
       mariadb:
