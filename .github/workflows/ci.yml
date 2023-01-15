@@ -15,7 +15,9 @@ jobs:
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
-      - uses: ./.github/workflows/install-ci-dependencies
+      - run: cwd
+      - run: ls -lah
+      - uses: .github/workflows/install-ci-dependencies
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
