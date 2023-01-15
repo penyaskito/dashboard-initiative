@@ -17,7 +17,7 @@ jobs:
     steps:
       - run: cwd
       - run: ls -lah
-      - uses: .github/workflows/install-ci-dependencies
+      - uses: ./.github/workflows/install-ci-dependencies
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
