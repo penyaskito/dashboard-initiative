@@ -180,7 +180,7 @@ class RoboFile extends \Robo\Tasks {
       ->mkdir('artifacts/phpcs');
     $tasks[] = $this->taskExecStack()
       ->exec('vendor/bin/phpcs --standard=Drupal --report=junit --report-junit=artifacts/phpcs/phpcs.xml web/modules/contrib/dashboard')
-      ->exec('vendor/bin/phpcs --standard=DrupalPractice --report=junit --report-junit=artifacts/phpcs/phpcs.xml web/contrib/dashboard');
+      ->exec('vendor/bin/phpcs --standard=DrupalPractice --report=junit --report-junit=artifacts/phpcs/phpcs.xml web/modules/contrib/dashboard');
     return $tasks;
   }
 
