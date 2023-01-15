@@ -30,16 +30,17 @@ jobs:
       - name: Drush status
         run: robo job:drush-status
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        with:
-          limit-access-to-actor: true
-
       - name: Serve drupal
         run: vendor/bin/robo job:serve-drupal
 
       - name: Run PHPUnit tests
         run: vendor/bin/robo job:unit-tests
+
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        with:
+          limit-access-to-actor: true
+
 
   code-standards:
     runs-on: ubuntu-latest
