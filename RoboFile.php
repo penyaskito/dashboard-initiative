@@ -30,7 +30,7 @@ class RoboFile extends \Robo\Tasks {
    */
   public function jobUnitTests() {
     $collection = $this->collectionBuilder();
-    $collection->addTask($this->installDrupal());
+    // $collection->addTask($this->installDrupal());
     $collection->addTaskList($this->runUnitTests());
     return $collection->run();
   }
