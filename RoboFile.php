@@ -49,6 +49,18 @@ class RoboFile extends \Robo\Tasks {
   }
 
   /**
+   * Command to check drush status.
+   *
+   * @return \Robo\Result
+   *   The result of the collection of tasks.
+   */
+  public function jobDrushStatus() {
+    $collection = $this->collectionBuilder();
+    $collection->addTask($this->drushStatus());
+    return $collection->run();
+  }
+
+  /**
    * Command to check for Drupal's Coding Standards.
    *
    * @return \Robo\Result
@@ -277,6 +289,19 @@ class RoboFile extends \Robo\Tasks {
       ->args('site-install')
       ->option('verbose')
       ->option('yes');
+    return $task;
+  }
+
+  /**
+   * Drush status.
+   *
+   * @return \Robo\Task\Base\Exec
+   *   A task to check drush status.
+   */
+  protected function drushStatus()
+  {
+    $task = $this->drush()
+      ->args('status');
     return $task;
   }
 

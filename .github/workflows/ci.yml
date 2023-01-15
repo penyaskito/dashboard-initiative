@@ -27,6 +27,9 @@ jobs:
       - name: Build project
         run: robo job:build
 
+      - name: Drush status
+        run: robo job:drush-status
+
       - name: Run PHPUnit tests
         run: vendor/bin/robo job:unit-tests
 
