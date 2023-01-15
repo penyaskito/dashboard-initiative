@@ -15,13 +15,12 @@ jobs:
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
-      - run: pwd
-      - run: ls -lah
-      - uses: ./.github/workflows/install-ci-dependencies
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
-
+      - run: pwd
+      - run: ls -lah
+      - uses: ./.github/workflows/install-ci-dependencies
       - name: Update composer
         run: composer self-update --2
 
@@ -37,10 +36,10 @@ jobs:
       image: drupal:php8.1-apache-bullseye
 
     steps:
-      - uses: ./.github/workflows/install-ci-dependencies
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
+      - uses: ./.github/workflows/install-ci-dependencies
 
       - name: Update composer
         run: composer self-update --2
@@ -66,10 +65,10 @@ jobs:
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
     steps:
-      - uses: ./.github/workflows/install-ci-dependencies
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
+      - uses: ./.github/workflows/install-ci-dependencies
 
       - name: Update composer
         run: composer self-update --2
