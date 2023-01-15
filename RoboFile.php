@@ -110,6 +110,8 @@ class RoboFile extends \Robo\Tasks {
     // $collection->addTaskList($this->importDatabase());
     // $collection->addTaskList($this->runUpdateDatabase());
     $collection->addTaskList($this->runServeDrupal());
+    $collection->addTaskList($this->installDrupal());
+
     return $collection->run();
   }
 
