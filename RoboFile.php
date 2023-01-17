@@ -202,9 +202,10 @@ class RoboFile extends \Robo\Tasks {
     // There is an existing installation from the docker container. For now let's just delete that
     // for avoiding confusion.
     $tasks[] = $this->taskExec('rm -rf /var/www/html');
-    $tasks[] = $this->taskExec('ln -sf ' . getenv('GITHUB_WORKSPACE') . '/web /var/www/html');
+    $tasks[] = $this->taskExec('ln -sf ' . getenv('GITHUB_WORKSPACE') . ' /var/www/');
     $tasks[] = $this->taskExec('chown -R www-data:www-data ' . getenv('GITHUB_WORKSPACE'));
     $tasks[] = $this->taskExec('echo "\nServerName localhost" >> /etc/apache2/apache2.conf');
+    $tasks[] = $this->taskExec('cp ' . getenv('GITHUB_WORKSPACE') . '/.github/config/apache2/000-default.conf /etc/apache2/sites-available');
     $tasks[] = $this->taskExec('service apache2 start');
     return $tasks;
   }
