@@ -203,7 +203,7 @@ class RoboFile extends \Robo\Tasks {
     // for avoiding confusion.
     $tasks[] = $this->taskExec('rm -rf /var/www/html');
     $tasks[] = $this->taskExec('ln -sf ' . getenv('GITHUB_WORKSPACE') . '/web /var/www/html');
-    $tasks[] = $this->taskExec('chown -r www-data:www-data ' . getenv('GITHUB_WORKSPACE'));
+    $tasks[] = $this->taskExec('chown -R www-data:www-data ' . getenv('GITHUB_WORKSPACE'));
     $tasks[] = $this->taskExec('echo "\nServerName localhost" >> /etc/apache2/apache2.conf');
     $tasks[] = $this->taskExec('service apache2 start');
     return $tasks;
