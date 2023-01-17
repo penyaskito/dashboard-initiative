@@ -3,39 +3,14 @@ name: Tests and code
 jobs:
   phpunit:
     runs-on: ubuntu-latest
-    container:
-      image: drupal:php8.1-apache-bullseye
-    services:
-      mariadb:
-        image: mariadb:latest
-        env:
-          MYSQL_ROOT_PASSWORD: root
-        ports:
-          - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
     steps:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - uses: ./.github/workflows/install-ci-dependencies
-      - name: Update composer
-        run: composer self-update --2
-
-      - name: Build project
-        run: robo job:build
-
-      - name: Serve drupal
-        run: vendor/bin/robo job:serve-drupal
-
-      - name: Run PHPUnit tests
-        run: vendor/bin/robo job:unit-tests
-
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        if: success() || failure()
-        with:
-          limit-access-to-actor: true
+      - uses: jonaseberle/github-action-setup-ddev@v1
+      - run: ddev composer install
+      - run: ddev drush si
+      - run: ddev exec phpunit --testsuite all
 
 
   code-standards:
