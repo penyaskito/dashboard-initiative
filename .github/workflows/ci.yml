@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: ddev composer install
       - name: Enable XDebug
-        run: ddev composer install
+        run: ddev xdebug
       - name: Run tests with coverage report
         run: ddev exec XDEBUG_MODE=coverage phpunit  --debug --verbose --coverage-html ./coverage web/modules/contrib/dashboard
       - name: Archive code coverage results
