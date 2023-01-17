@@ -1,0 +1,50 @@
+on: [push, pull_request]
+name: Tests and code analysis
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - name: Setup DDEV
+        uses: jonaseberle/github-action-setup-ddev@v1
+      - name: Install dependencies
+        run: ddev composer install
+      - name: Install Drupal
+        run: ddev drush si
+      - name: Run tests
+        run: ddev exec phpunit --testsuite all
+
+  code-standards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - name: Setup DDEV
+        uses: jonaseberle/github-action-setup-ddev@v1
+      - name: Install dependencies
+        run: ddev composer install
+      - name: Check coding standards
+        run: ddev exec phpcs --standard=web/core/phpcs.xml.dist web/modules/contrib/dashboard/
+
+  code-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - name: Setup DDEV
+        uses: jonaseberle/github-action-setup-ddev@v1
+      - name: Install dependencies
+        run: ddev composer install
+      - name: Enable XDebug
+        run: ddev xdebug
+      - name: Run tests with coverage report
+        run: ddev exec XDEBUG_MODE=coverage phpunit  --debug --verbose --coverage-html ./coverage web/modules/contrib/dashboard
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage
