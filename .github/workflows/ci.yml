@@ -1,5 +1,5 @@
 on: [push, pull_request]
-name: Tests and code
+name: Tests and code analysis
 jobs:
   phpunit:
     runs-on: ubuntu-latest
@@ -7,65 +7,44 @@ jobs:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - uses: jonaseberle/github-action-setup-ddev@v1
-      - run: ddev composer install
-      - run: ddev drush si
-      - run: ddev exec phpunit --testsuite all
-
+      - name: Setup DDEV
+        uses: jonaseberle/github-action-setup-ddev@v1
+      - name: Install dependencies
+        run: ddev composer install
+      - name: Install Drupal
+        run: ddev drush si
+      - name: Run tests
+        run: ddev exec phpunit --testsuite all
 
   code-standards:
     runs-on: ubuntu-latest
-    container:
-      image: drupal:php8.1-apache-bullseye
-
     steps:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - uses: ./.github/workflows/install-ci-dependencies
-
-      - name: Update composer
-        run: composer self-update --2
-
-      - name: Build project
-        run: robo job:build
-
+      - name: Setup DDEV
+        uses: jonaseberle/github-action-setup-ddev@v1
+      - name: Install dependencies
+        run: ddev composer install
       - name: Check coding standards
-        run: vendor/bin/robo job:coding-standards
+        run: ddev exec phpcs --standard=web/core/phpcs.xml.dist web/modules/contrib/dashboard/
 
   code-coverage:
     runs-on: ubuntu-latest
-    container:
-      image: drupal:php8.1-apache-bullseye
-
-    services:
-      mariadb:
-        image: mariadb:latest
-        env:
-          MYSQL_ROOT_PASSWORD: root
-        ports:
-          - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
     steps:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - uses: ./.github/workflows/install-ci-dependencies
-
-      - name: Update composer
-        run: composer self-update --2
-
-      - name: Build project
-        run: robo job:build
-
-      - name: Assess code coverage
-        run: |
-          vendor/bin/robo job:coverage-report
-
+      - name: Setup DDEV
+        uses: jonaseberle/github-action-setup-ddev@v1
+      - name: Install dependencies
+        run: ddev composer install
+      - name: Enable XDebug
+        run: ddev composer install
+      - name: Run tests with coverage report
+        run: ddev exec XDEBUG_MODE=coverage phpunit  --debug --verbose --coverage-html ./coverage web/modules/contrib/dashboard
       - name: Archive code coverage results
         uses: actions/upload-artifact@v2
         with:
           name: coverage
           path: coverage
-
