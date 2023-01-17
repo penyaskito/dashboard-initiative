@@ -19,5 +19,3 @@ runs:
       shell: bash
     - run: chmod +x robo.phar && mv robo.phar /usr/local/bin/robo
       shell: bash
-    - run: set -o allexport && source .github/config/.env && set +o allexport
-      shell: bash
