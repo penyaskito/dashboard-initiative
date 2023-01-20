@@ -1,3 +1,6 @@
+![build status](https://github.com/penyaskito/dashboard-initiative/actions/workflows/ci.yml/badge.svg)
+
+
 About the initiative
 ====
 
