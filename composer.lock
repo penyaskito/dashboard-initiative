@@ -2525,7 +2525,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/sandbox/penyaskito-3327580.git",
-                "reference": "abf1fee00e5930f57e30bba172e5adf086135e81"
+                "reference": "e263a357db2fc61fbf2fcf6a6ded36f61b2050e5"
             },
             "default-branch": true,
             "type": "drupal-module",
@@ -2541,7 +2541,7 @@
                 "issues": "https://www.drupal.org/project/issues/3327580",
                 "source": "https://git.drupalcode.org/sandbox/penyaskito-3327580"
             },
-            "time": "2023-02-11T09:40:55+00:00"
+            "time": "2023-03-16T20:04:25+00:00"
         },
         {
             "name": "drush/drush",
