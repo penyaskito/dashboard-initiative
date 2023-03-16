@@ -34,7 +34,7 @@ $settings['config_sync_directory'] = '../config/sync';```
 ```
 
 ```
-ddev drush si
+ddev drush si --yes
 ddev drush upwd admin admin
 ddev drush user:role:add administrator admin
 
