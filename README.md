@@ -1,4 +1,6 @@
-![build status](https://github.com/penyaskito/dashboard-initiative/actions/workflows/ci.yml/badge.svg)
+| [![build status](https://github.com/penyaskito/dashboard-initiative/actions/workflows/ci.yml/badge.svg)](https://github.com/penyaskito/dashboard-initiative/actions/workflows/ci.yml) |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Online demo by Tugboat](https://main-ps44ayjkzq3gdy5zk1fifpraj8ctkihy.tugboatqa.com/)                                                                                 |
 
 
 About the initiative
@@ -23,17 +25,12 @@ git clone git@github.com:penyaskito/dashboard-initiative.git
 ```
 If you are planning to use ddev, now it's a good moment for ```ddev start```.
 
+You can run ```./install.sh```
+
+which runs:
+
 ```
 ddev composer install
-```
-
-Edit ```web/sites/default/settings.ddev.php``` and ensure you have
-
-```
-$settings['config_sync_directory'] = '../config/sync';```
-```
-
-```
 ddev drush si --yes
 ddev drush upwd admin admin
 ddev drush user:role:add administrator admin
