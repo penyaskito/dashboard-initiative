@@ -1,13 +1,10 @@
 uuid: 710be2f0-92d8-41ad-841e-9ab9443fdc6e
 langcode: en
 status: true
-dependencies:
-  config:
-    - user.role.administrator
+dependencies: {  }
 id: administrator
 label: Administrator
 description: ''
-role: administrator
 layout:
   -
     layout_id: layout_twocol_section
@@ -61,3 +58,4 @@ layout:
         weight: 0
         additional: {  }
     third_party_settings: {  }
+weight: -10
