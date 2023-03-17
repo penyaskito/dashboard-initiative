@@ -82,6 +82,9 @@
         "patches": {
             "drupal/core": {
                 "Provide a block for running cron from a dashboard": "https://www.drupal.org/files/issues/2022-12-17/3327827-block-cron.patch"
+            },
+            "drupal/dashboard": {
+                "Show dashboards as local tasks": "https://www.drupal.org/files/issues/2023-03-17/3348617-dashboard-local-tasks-2.patch"
             }
         }
     }

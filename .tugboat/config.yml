@@ -49,6 +49,9 @@ services:
         - drush config:import --yes
         - drush php:eval 'include_once "core/profiles/standard/standard.install"; standard_install();'
 
+        - drush user:create editor --password=editor
+        - drush user:role:add content_editor editor
+
       # Commands that build the site. This is where you would add things
       # like feature reverts or any other drush commands required to
       # set up or configure the site. When a preview is built from a
