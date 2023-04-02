@@ -9,3 +9,5 @@ drush php-eval 'include_once "core/profiles/standard/standard.install"; standard
 
 drush user:create editor --password=editor
 drush user:role:add content_editor editor
+
+drush en dashboard_default_content --yes
