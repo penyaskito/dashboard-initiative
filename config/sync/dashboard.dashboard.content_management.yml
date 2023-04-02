@@ -1,0 +1,43 @@
+uuid: 28071021-bea0-412d-b662-4e3035199a5a
+langcode: en
+status: true
+dependencies: {  }
+id: content_management
+label: 'Content Management'
+description: 'Content Management dashboard'
+layout:
+  -
+    layout_id: layout_twocol_section
+    layout_settings:
+      label: ''
+      context_mapping: {  }
+      column_widths: 50-50
+    components:
+      b3137868-3d5a-43b6-aa00-1b9c21ba5410:
+        uuid: b3137868-3d5a-43b6-aa00-1b9c21ba5410
+        region: first
+        configuration:
+          id: 'views_block:content_recent-block_1'
+          label: ''
+          label_display: visible
+          provider: views
+          context_mapping: {  }
+          views_label: ''
+          items_per_page: none
+        weight: 0
+        additional: {  }
+      26f2d47f-7039-4b0b-bfec-0e5e35988639:
+        uuid: 26f2d47f-7039-4b0b-bfec-0e5e35988639
+        region: second
+        configuration:
+          id: 'views_block:comments_recent-block_1'
+          label: ''
+          label_display: visible
+          provider: views
+          context_mapping: {  }
+          views_label: ''
+          items_per_page: none
+        weight: 0
+        additional: {  }
+    third_party_settings: {  }
+weight: -10
