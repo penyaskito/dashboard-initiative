@@ -6,3 +6,6 @@ drush entity-delete shortcut_set --yes
 drush cim --yes
 # For restoring shortcuts.
 drush php-eval 'include_once "core/profiles/standard/standard.install"; standard_install();'
+
+drush user:create editor --password=editor
+drush user:role:add content_editor editor

@@ -3,12 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - dashboard.dashboard.content_management
     - node.type.article
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
     - comment
     - contextual
+    - dashboard
     - file
     - node
     - path
@@ -45,5 +47,6 @@ permissions:
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'view all revisions'
+  - 'view content_management dashboard'
   - 'view own unpublished content'
   - 'view the administration theme'
