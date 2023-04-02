@@ -25,24 +25,7 @@ git clone git@github.com:penyaskito/dashboard-initiative.git
 ```
 If you are planning to use ddev, now it's a good moment for ```ddev start```.
 
-You can run ```./install.sh```
-
-which runs:
-
-```
-ddev composer install
-ddev drush si --yes
-ddev drush upwd admin admin
-ddev drush user:role:add administrator admin
-
-ddev drush cset system.site uuid 05104925-b5ef-447d-a96a-bb6b3eed6182 --yes
-ddev drush entity-delete shortcut_set --yes
-
-ddev drush cim --yes
-
-# For restoring shortcuts.
-ddev drush php-eval 'include_once "core/profiles/standard/standard.install"; standard_install();'
-```
+You can run ```ddev exec ./install.sh```
 
 For updating your env to the latest:
 
@@ -50,6 +33,8 @@ For updating your env to the latest:
 ddev composer update drupal/dashboard
 ```
 
+You might need to run ```ddev exec ./install.sh``` again, as we are not providing
+any upgrade paths yet.
 
 For contributing:
 ====
