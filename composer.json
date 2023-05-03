@@ -84,7 +84,7 @@
                 "Provide a block for running cron from a dashboard": "https://www.drupal.org/files/issues/2022-12-17/3327827-block-cron.patch"
             },
             "drupal/dashboard": {
-                "#3351710 Provide a block with my own content drafts": "https://www.drupal.org/files/issues/2023-04-02/3351710-own-drafts-view-5.patch"
+                "#3351710 Provide a block with my own content drafts": "https://www.drupal.org/files/issues/2023-05-03/3351710-own-drafts-view-9.patch"
             }
         }
     }
