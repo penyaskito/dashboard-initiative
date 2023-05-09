@@ -12,6 +12,7 @@ module:
   contact: 0
   contextual: 0
   dashboard: 0
+  dashboard_default_content: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0

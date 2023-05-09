@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31142ee4507f91a54fadb9b041ea7234",
+    "content-hash": "7ae69da9d22d0786e079f3ac9986e8b5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2525,7 +2525,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/sandbox/penyaskito-3327580.git",
-                "reference": "e942f1207f6e301210faa01bf17365933d47e289"
+                "reference": "0b12c316ad6e5121b5ce22986c354eb94e1cf8b0"
             },
             "default-branch": true,
             "type": "drupal-module",
@@ -2541,7 +2541,7 @@
                 "issues": "https://www.drupal.org/project/issues/3327580",
                 "source": "https://git.drupalcode.org/sandbox/penyaskito-3327580"
             },
-            "time": "2023-05-09T09:45:01+00:00"
+            "time": "2023-05-09T10:09:52+00:00"
         },
         {
             "name": "drush/drush",
