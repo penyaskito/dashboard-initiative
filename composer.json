@@ -84,6 +84,7 @@
                 "Provide a block for running cron from a dashboard": "https://www.drupal.org/files/issues/2022-12-17/3327827-block-cron.patch"
             },
             "drupal/dashboard": {
+                "Improve Dashboard management permissions for admin users": "https://www.drupal.org/files/issues/2023-05-09/3359059-dashboard-access-2.patch"
             }
         }
     }
