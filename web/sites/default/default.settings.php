@@ -488,6 +488,15 @@ $settings['update_free_access'] = FALSE;
 # $settings['file_chmod_file'] = 0664;
 
 /**
+ * Optimized assets path:
+ *
+ * A local file system path where optimized assets will be stored. This directory
+ * must exist and be writable by Drupal. This directory must be relative to
+ * the Drupal installation directory and be accessible over the web.
+ */
+# $settings['file_assets_path'] = 'sites/default/files';
+
+/**
  * Public file base URL:
  *
  * An alternative base URL to be used for serving public files. This must
@@ -531,6 +540,42 @@ $settings['update_free_access'] = FALSE;
  * access to all files within that scheme.
  */
 # $settings['file_additional_public_schemes'] = ['example'];
+
+/**
+ * File schemes whose paths should not be normalized:
+ *
+ * Normally, Drupal normalizes '/./' and '/../' segments in file URIs in order
+ * to prevent unintended file access. For example, 'private://css/../image.png'
+ * is normalized to 'private://image.png' before checking access to the file.
+ *
+ * On Windows, Drupal also replaces '\' with '/' in URIs for the local
+ * filesystem.
+ *
+ * If file URIs with one or more scheme should not be normalized like this, then
+ * list the schemes here. For example, if 'porcelain://china/./plate.png' should
+ * not be normalized to 'porcelain://china/plate.png', then add 'porcelain' to
+ * this array. In this case, make sure that the module providing the 'porcelain'
+ * scheme does not allow unintended file access when using '/../' to move up the
+ * directory tree.
+ */
+# $settings['file_sa_core_2023_005_schemes'] = ['porcelain'];
+
+/**
+ * Configuration for phpinfo() admin status report.
+ *
+ * Drupal's admin UI includes a report at admin/reports/status/php which shows
+ * the output of phpinfo(). The full output can contain sensitive information
+ * so by default Drupal removes some sections.
+ *
+ * This behaviour can be configured by setting this variable to a different
+ * value corresponding to the flags parameter of phpinfo().
+ *
+ * If you need to expose more information in the report - for example to debug a
+ * problem - consider doing so temporarily.
+ *
+ * @see https://www.php.net/manual/function.phpinfo.php
+ */
+# $settings['sa_core_2023_004_phpinfo_flags'] = ~ (INFO_VARIABLES | INFO_ENVIRONMENT);
 
 /**
  * Private file path:
