@@ -45,6 +45,10 @@
         "sort-packages": true
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
