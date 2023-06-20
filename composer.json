@@ -88,6 +88,7 @@
                 "Provide a block for running cron from a dashboard": "https://www.drupal.org/files/issues/2022-12-17/3327827-block-cron.patch"
             },
             "drupal/dashboard": {
+                "Local actions edit": "https://www.drupal.org/files/issues/2023-04-10/3351703-local-actions-edit-layout-8.patch"
             }
         }
     }
