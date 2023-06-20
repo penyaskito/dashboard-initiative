@@ -27,7 +27,7 @@
         "drupal/core-project-message": "10.1.x-dev",
         "drupal/core-recommended": "10.1.x-dev",
         "drupal/dashboard": "1.0.x-dev",
-        "drush/drush": "^11.4"
+        "drush/drush": "^12"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -45,6 +45,10 @@
         "sort-packages": true
     },
     "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"

@@ -12,6 +12,7 @@ module:
   contact: 0
   contextual: 0
   dashboard: 0
+  dashboard_default_content: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -34,6 +35,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  phpass: 0
   search: 0
   shortcut: 0
   system: 0
