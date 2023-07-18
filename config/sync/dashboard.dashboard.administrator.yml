@@ -41,17 +41,29 @@ layout:
         additional: {  }
     third_party_settings: {  }
   -
-    layout_id: layout_onecol
+    layout_id: layout_twocol_section
     layout_settings:
       label: ''
       context_mapping: {  }
+      column_widths: 50-50
     components:
       2a5a3942-b82d-4c87-852e-82fcb1b6c072:
         uuid: 2a5a3942-b82d-4c87-852e-82fcb1b6c072
-        region: content
+        region: first
         configuration:
           id: system_cron_status_block
           label: 'Cron status'
+          label_display: visible
+          provider: system
+          context_mapping: {  }
+        weight: 0
+        additional: {  }
+      3be7e244-44ba-4268-a189-bdc0fca52d92:
+        uuid: 3be7e244-44ba-4268-a189-bdc0fca52d92
+        region: second
+        configuration:
+          id: system_clear_cache_block
+          label: 'Clear cache'
           label_display: visible
           provider: system
           context_mapping: {  }
