@@ -22,10 +22,10 @@
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
-        "drupal/core-composer-scaffold": "10.1.x-dev",
-        "drupal/core-dev": "10.1.x-dev",
-        "drupal/core-project-message": "10.1.x-dev",
-        "drupal/core-recommended": "10.1.x-dev",
+        "drupal/core-composer-scaffold": "11.x-dev",
+        "drupal/core-dev": "11.x-dev",
+        "drupal/core-project-message": "11.x-dev",
+        "drupal/core-recommended": "11.x-dev",
         "drupal/dashboard": "1.0.x-dev",
         "drush/drush": "^12"
     },
@@ -40,7 +40,8 @@
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "php-http/discovery": true
         },
         "sort-packages": true
     },
