@@ -6,12 +6,13 @@
 About the initiative
 ====
 
-Create a new and modern Dashboard based on user needs, and define that needs per role.
+Create a new and modern Dashboard based on user needs, and define those needs per role.
 
-The homepage of the initiative is at the Ideas issue queue. See ["Modern Dashboard with Role presets"](https://www.drupal.org/project/ideas/issues/3244581), which provides a lot of context.
+The homepage of the initiative is at the Ideas issue queue. See ["Enhance user experience with customizable dashboards"](https://www.drupal.org/project/ideas/issues/3244581)
+(was "Modern Dashboard with Role presets") on drupal.org, which provides a lot of context.
 
-Development happens on a [sandbox](https://www.drupal.org/sandbox/penyaskito/3327580), as we are still working on getting access to
-the [Dashboard namespace](https://www.drupal.org/project/dashboard). Feel free to create issues there, as we will move them when we are able to.
+Development happens in a [sandbox project](https://www.drupal.org/sandbox/penyaskito/3327580), as we are still working on getting access to
+the [Dashboard namespace](https://www.drupal.org/project/dashboard). Feel free to create issues in the sandbox, as we will move them when we are able to.
 
 
 Setup
