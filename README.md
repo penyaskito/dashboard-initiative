@@ -11,17 +11,16 @@ Create a new and modern Dashboard based on user needs, and define those needs pe
 The homepage of the initiative is at the Ideas issue queue. See ["Enhance user experience with customizable dashboards"](https://www.drupal.org/project/ideas/issues/3244581)
 (was "Modern Dashboard with Role presets") on drupal.org, which provides a lot of context.
 
-Development happens in a [sandbox project](https://www.drupal.org/sandbox/penyaskito/3327580). Feel free to create or work on issues in the sandbox.
+Development happens in a [sandbox project](https://www.drupal.org/sandbox/penyaskito/3327580). Feel free to create or work on issues in the sandbox. 
 
-If you can, also create a PR here applying the patch via composer.json. This helps with:
+If you can, also create a PR here applying the patch via [composer.json](https://github.com/penyaskito/dashboard-initiative/blob/main/composer.json#L86). 
+This helps with:
 * Running the tests, as sandboxes don't have CI enabled.
 * Get a tugboat link with a site with the patch applied where people can test the fix/improvement.
 * Giving appropiate credit here too for your contribution!
 
-
 Setup
 ====
-
 
 Clone this repository:
 
