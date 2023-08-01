@@ -13,12 +13,6 @@ The homepage of the initiative is at the Ideas issue queue. See ["Enhance user e
 
 Development happens in a [sandbox project](https://www.drupal.org/sandbox/penyaskito/3327580). Feel free to create or work on issues in the sandbox. 
 
-If you can, also create a PR here applying the patch via [composer.json](https://github.com/penyaskito/dashboard-initiative/blob/main/composer.json#L86). 
-This helps with:
-* Running the tests, as sandboxes don't have CI enabled.
-* Get a tugboat link with a site with the patch applied where people can test the fix/improvement.
-* Giving appropiate credit here too for your contribution!
-
 Setup
 ====
 
@@ -54,6 +48,12 @@ Git checkout 1.0.x
 ```
 git co 1.0.x
 ```
+
+If you can, also create a PR here applying the patch via [composer.json](https://github.com/penyaskito/dashboard-initiative/blob/main/composer.json#L86). 
+This helps with:
+* Running the tests, as sandboxes don't have CI enabled.
+* Get a tugboat link with a site with the patch applied where people can test the fix/improvement.
+* Giving appropiate credit here too for your contribution!
 
 Running tests
 ====
