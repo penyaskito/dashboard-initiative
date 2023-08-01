@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: Setup DDEV
-        uses: jonaseberle/github-action-setup-ddev@v1
+        uses: ddev/github-action-setup-ddev@v1
       - name: Install dependencies
         run: ddev composer install
       - name: Install Drupal
@@ -27,7 +27,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: Setup DDEV
-        uses: jonaseberle/github-action-setup-ddev@v1
+        uses: ddev/github-action-setup-ddev@v1
       - name: Install dependencies
         run: ddev composer install
       - name: Check coding standards
@@ -40,7 +40,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: Setup DDEV
-        uses: jonaseberle/github-action-setup-ddev@v1
+        uses: ddev/github-action-setup-ddev@v1
       - name: Install dependencies
         run: ddev composer install
       - name: Enable XDebug
