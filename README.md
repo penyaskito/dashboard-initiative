@@ -23,6 +23,8 @@ git clone git@github.com:penyaskito/dashboard-initiative.git
 ```
 If you are planning to use ddev, now it's a good moment for ```ddev start```.
 
+Then, you need to install all the dependencies using ```ddev composer install```.
+
 You can run ```ddev exec ./install.sh```
 
 For updating your env to the latest:
