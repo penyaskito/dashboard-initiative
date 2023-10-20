@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36ffee500c62d8973d8b55dc3a250dde",
+    "content-hash": "d077ecf7bbbd21ff874cc3c0e6ee1a04",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2626,6 +2626,58 @@
                 "source": "https://git.drupalcode.org/sandbox/penyaskito-3327580"
             },
             "time": "2023-10-19T13:17:44+00:00"
+        },
+        {
+            "name": "drupal/navigation",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/navigation.git",
+                "reference": "72df0418fcb0cce6759bbee2d451ffd002cebc8b"
+            },
+            "require": {
+                "drupal/core": "^9.4 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "1.x-dev",
+                    "datestamp": "1697649152",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ckrina",
+                    "homepage": "https://www.drupal.org/user/1206650"
+                },
+                {
+                    "name": "claireristow",
+                    "homepage": "https://www.drupal.org/user/3673870"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "mherchel",
+                    "homepage": "https://www.drupal.org/user/118428"
+                }
+            ],
+            "homepage": "https://drupal.org/project/navigation",
+            "support": {
+                "source": "https://git.drupalcode.org/project/navigation"
+            }
         },
         {
             "name": "drush/drush",
@@ -11133,7 +11185,8 @@
         "drupal/core-dev": 20,
         "drupal/core-project-message": 20,
         "drupal/core-recommended": 20,
-        "drupal/dashboard": 20
+        "drupal/dashboard": 20,
+        "drupal/navigation": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
