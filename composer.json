@@ -90,6 +90,7 @@
                 "Provide a block for clearing cache from a dashboard": "https://www.drupal.org/files/issues/2023-06-28/3351706-27-block-clear-cache.patch"
             },
             "drupal/dashboard": {
+                "DashboardLocalAction results in WSOD on dashboard route if no dashboard exists": "https://www.drupal.org/files/issues/2023-10-20/3375471-11.patch"
             }
         }
     }
