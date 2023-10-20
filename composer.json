@@ -27,6 +27,7 @@
         "drupal/core-project-message": "11.x-dev",
         "drupal/core-recommended": "11.x-dev",
         "drupal/dashboard": "1.0.x-dev",
+        "drupal/navigation": "1.x-dev",
         "drush/drush": "^12"
     },
     "conflict": {
@@ -90,6 +91,7 @@
                 "Provide a block for clearing cache from a dashboard": "https://www.drupal.org/files/issues/2023-06-28/3351706-27-block-clear-cache.patch"
             },
             "drupal/dashboard": {
+                "Navigation integration": "https://www.drupal.org/files/issues/2023-10-20/3395527-dashboard-section-2.patch"
             }
         }
     }
