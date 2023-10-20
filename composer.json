@@ -90,6 +90,7 @@
                 "Provide a block for clearing cache from a dashboard": "https://www.drupal.org/files/issues/2023-06-28/3351706-27-block-clear-cache.patch"
             },
             "drupal/dashboard": {
+                "Provide content blocks in one view": "https://www.drupal.org/files/issues/2023-10-20/3395496-8.patch"
             }
         }
     }

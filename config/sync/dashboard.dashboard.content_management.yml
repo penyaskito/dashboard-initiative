@@ -13,11 +13,11 @@ layout:
       context_mapping: {  }
       column_widths: 50-50
     components:
-      7e5e7ef4-cd78-4301-a84f-e6c8dc7074be:
-        uuid: 7e5e7ef4-cd78-4301-a84f-e6c8dc7074be
+      ef01b050-597d-4462-9131-9ce5361d8501:
+        uuid: ef01b050-597d-4462-9131-9ce5361d8501
         region: first
         configuration:
-          id: 'views_block:my_own_drafts-block_own_drafts'
+          id: 'views_block:dashboard_content-block_own_drafts'
           label: ''
           label_display: visible
           provider: views
@@ -25,6 +25,32 @@ layout:
           views_label: ''
           items_per_page: none
         weight: 0
+        additional: {  }
+      fb01524d-6ea6-4574-81a5-9fc1678ad529:
+        uuid: fb01524d-6ea6-4574-81a5-9fc1678ad529
+        region: second
+        configuration:
+          id: 'views_block:dashboard_content-block_own_recent_content'
+          label: ''
+          label_display: visible
+          provider: views
+          context_mapping: {  }
+          views_label: ''
+          items_per_page: none
+        weight: 1
+        additional: {  }
+      5db2e933-08eb-4dbf-a24b-a7407f24b063:
+        uuid: 5db2e933-08eb-4dbf-a24b-a7407f24b063
+        region: first
+        configuration:
+          id: 'views_block:dashboard_content-block_edited_content'
+          label: ''
+          label_display: visible
+          provider: views
+          context_mapping: {  }
+          views_label: ''
+          items_per_page: none
+        weight: 1
         additional: {  }
     third_party_settings: {  }
   -
