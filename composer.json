@@ -90,6 +90,7 @@
                 "Provide a block for clearing cache from a dashboard": "https://www.drupal.org/files/issues/2023-06-28/3351706-27-block-clear-cache.patch"
             },
             "drupal/dashboard": {
+                "Limit the selectable blocks on dashboards": "https://www.drupal.org/files/issues/2023-04-02/3351705-blocks-filtered-poc-1.patch"
             }
         }
     }
