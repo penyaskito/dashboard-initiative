@@ -2624,7 +2624,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/dashboard.git",
-                "reference": "d12e725428dde685783e98c98ca54f7a46841cb6"
+                "reference": "2c3b4796670a5074dbcfb1d4681e04228ec4f661"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11"
@@ -2636,7 +2636,7 @@
                 },
                 "drupal": {
                     "version": "2.x-dev",
-                    "datestamp": "1704902598",
+                    "datestamp": "1704904724",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
