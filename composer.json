@@ -11,10 +11,6 @@
     },
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://git.drupalcode.org/sandbox/penyaskito-3327580.git"
-        },
-        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
@@ -26,7 +22,7 @@
         "drupal/core-dev": "11.x-dev",
         "drupal/core-project-message": "11.x-dev",
         "drupal/core-recommended": "11.x-dev",
-        "drupal/dashboard": "1.0.x-dev",
+        "drupal/dashboard": "2.x-dev",
         "drush/drush": "^12"
     },
     "conflict": {
