@@ -7,8 +7,7 @@ drush config-import --yes
 # For restoring shortcuts.
 drush php-eval 'include_once "core/profiles/standard/standard.install"; standard_install();'
 
-# Installing default content will create the user for us.
-drush user:password editor editor
+drush user:create editor --password=editor
 drush user:role:add content_editor editor
 
 # This is enabled by config for now.
