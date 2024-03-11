@@ -2624,7 +2624,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/dashboard.git",
-                "reference": "4b5366075b37c0b39bd66248d792d7186e788e24"
+                "reference": "f779962fbddcdb864d1e41a683a21a9baa73b3b1"
             },
             "require": {
                 "drupal/core": "^9 || ^10 || ^11"
@@ -2636,10 +2636,17 @@
                 },
                 "drupal": {
                     "version": "2.x-dev",
-                    "datestamp": "1704905286",
+                    "datestamp": "1707230013",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "enable-patching": true,
+                "patches": {
+                    "drupal/core": {
+                        "Provide a block for running cron from a dashboard": "https://www.drupal.org/files/issues/2022-12-17/3327827-block-cron.patch",
+                        "Provide a block for clearing cache from a dashboard": "https://www.drupal.org/files/issues/2023-06-28/3351706-27-block-clear-cache.patch"
                     }
                 }
             },
@@ -2650,7 +2657,7 @@
             "authors": [
                 {
                     "name": "See contributors",
-                    "homepage": "https://www.drupal.org/node/3327580/maintainers"
+                    "homepage": "https://www.drupal.org/node/35094/maintainers"
                 },
                 {
                     "name": "Anonymous",
@@ -2690,10 +2697,10 @@
                 }
             ],
             "description": "Dashboard (another attempt, yes)",
-            "homepage": "https://www.drupal.org/sandbox/penyaskito/3327580",
+            "homepage": "https://www.drupal.org/project/dashboard",
             "support": {
-                "source": "https://git.drupalcode.org/sandbox/penyaskito-3327580",
-                "issues": "https://www.drupal.org/project/issues/3327580"
+                "source": "https://git.drupalcode.org/project/dashboard",
+                "issues": "https://www.drupal.org/project/issues/dashboard"
             }
         },
         {
