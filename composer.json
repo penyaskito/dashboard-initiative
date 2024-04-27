@@ -23,7 +23,7 @@
         "drupal/core-project-message": "11.x-dev",
         "drupal/core-recommended": "11.x-dev",
         "drupal/dashboard": "2.x-dev",
-        "drush/drush": "^12"
+        "drush/drush": "^13"
     },
     "conflict": {
         "drupal/drupal": "*"
