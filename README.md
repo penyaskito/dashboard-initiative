@@ -1,3 +1,5 @@
+*This project is obsolete and no longer needed. Dashboard is stable and development happens in https://www.drupal.org/project/dashboard *
+
 | [![build status](https://github.com/penyaskito/dashboard-initiative/actions/workflows/ci.yml/badge.svg)](https://github.com/penyaskito/dashboard-initiative/actions/workflows/ci.yml) |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Online demo by Tugboat](https://main-ps44ayjkzq3gdy5zk1fifpraj8ctkihy.tugboatqa.com/)                                                                                 |
