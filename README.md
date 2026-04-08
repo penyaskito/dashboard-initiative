@@ -1,4 +1,12 @@
-*This project is obsolete and no longer needed. Dashboard is stable and development happens in https://www.drupal.org/project/dashboard *
+> [!WARNING]  
+> This project is obsolete and no longer needed. With [Drupal CMS](https://www.drupal.org/project/cms)
+> there's no point on getting it into Drupal Core, which this setup assisted with.
+
+> [!TIP]
+> The [Dashboard](https://www.drupal.org/project/dashboard) module is stable, and included in Drupal CMS 🎉.
+> Development happens in https://www.drupal.org/project/dashboard, see you there! 👀
+
+---------
 
 | [![build status](https://github.com/penyaskito/dashboard-initiative/actions/workflows/ci.yml/badge.svg)](https://github.com/penyaskito/dashboard-initiative/actions/workflows/ci.yml) |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
