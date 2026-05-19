@@ -83,9 +83,11 @@
         "patches": {
             "drupal/core": {
                 "Provide a block for running cron from a dashboard": "https://www.drupal.org/files/issues/2022-12-17/3327827-block-cron.patch",
-                "Provide a block for clearing cache from a dashboard": "https://www.drupal.org/files/issues/2023-06-28/3351706-27-block-clear-cache.patch"
+                "Provide a block for clearing cache from a dashboard": "https://www.drupal.org/files/issues/2023-06-28/3351706-27-block-clear-cache.patch",
+                "Issue #3395527: Integrate with navigation": "https://www.drupal.org/files/issues/2024-04-27/navigation-dashboard-hack.patch"
             },
             "drupal/dashboard": {
+                "Issue #3395527: Integrate with navigation": "https://git.drupalcode.org/project/dashboard/-/merge_requests/10.patch"
             }
         }
     }
